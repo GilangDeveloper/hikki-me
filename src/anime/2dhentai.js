@@ -32,7 +32,7 @@ module.exports = {
   async randomHentai() {
     return new Promise(async (resolve, reject) => {
       const random = Math.floor(Math.random() * (150 - 2 + 1)) + 2
-      const response = await fetch('https://2dhentai.club/page/'+random+'/', {
+      const response = await fetch('https://2dhentai.club/page/' + random + '/', {
         headers: {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36',
         },

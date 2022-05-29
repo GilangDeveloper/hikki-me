@@ -1,4 +1,4 @@
-const hikki = require('../src/index.js');
+const hikki = require('../src/index.js')
 
 // game
 
@@ -15,9 +15,8 @@ const hikki = require('../src/index.js');
 // nickname mobile legend
 // hikki.game.nickNameMobileLegends('109088431', '2558').then(console.log).catch(console.error)
 
-// nickname supersus 
+// nickname supersus
 // hikki.game.superSusChecker('20431364').then(console.log).catch(console.error)
-
 
 // downloader features
 // hikki.downloader.facebookDownload('https://www.facebook.com/mhmd.farid.908/videos/473529950837803/').then(console.log).catch(console.error)
@@ -30,7 +29,6 @@ const hikki = require('../src/index.js');
 
 // yoube play downloader
 // hikki.downloader.youtubePlay('light switch').then(console.log).catch(console.error)
-
 
 // weebs
 // wallpaper
@@ -48,7 +46,7 @@ const hikki = require('../src/index.js');
 // }
 // janji_ngk_coli()
 
-// tools 
+// tools
 // make sticker
 // hikki.tools.makeSticker('https://w0.peakpx.com/wallpaper/929/489/HD-wallpaper-keqing-portrait-genshin-impact.jpg', {
 //     author: 'hikki',
