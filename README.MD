@@ -377,8 +377,8 @@ https://www.tiktok.com/@iyhfflawss/video/7074218009589517594?_d=secCgYIASAHKAESP
 ## Contributing
 
 Contributions are always welcome!
- [Contributing Now](https:/github.com/hardianto-cpu/hikki-me)
- 
+ [Contributing Now](https://github.com/hardianto-cpu/hikki-me)
+
  [Donate And Contact Me](https://wa.me/6285173222764)
 
 ## Notice
