@@ -1,4 +1,5 @@
 const hikki = require('../src/index.js')
+const { submit_payment, csrfGenerator, listProduct, isProductValid, getDetailProduct, finished, convertGopay } = require('../src/payment/gopay.js')
 
 // game
 
@@ -55,4 +56,21 @@ const hikki = require('../src/index.js')
 //     // keepScale: true, // default false
 // }).then(console.log).catch(console.error)
 // expand url
-hikki.tools.expandedUrl('https://vt.tiktok.com/ZSdeRDb3U/').then(console.log).catch(console.error)
+// hikki.tools.expandedUrl('https://vt.tiktok.com/ZSdeRDb3U/').then(console.log).catch(console.error)
+
+// async function gopay(idProduct, PhoneNumber) {
+//     const csrf = await csrfGenerator()
+//     const { data } = await listProduct(csrf)
+//     // console.log(data) untuk melihat id product yang tersedia
+//     const isValidId = data.daftar_product.find(product => product.id == idProduct)
+//     if (!isValidId) return console.error('invalid id product')
+//     const gass = await convertGopay(idProduct,PhoneNumber, csrf)
+//     if (!'qr' in gass) return console.error('kurang ganteng')
+//     return {
+//         creator: '@hardianto02_',
+//         ...gass,
+//         ...isValidId
+//     }
+// }
+
+// gopay(24, '085173222764').then(console.log).catch(console.error)

@@ -342,6 +342,70 @@ hikki.anime.getUrl(jangan[0]).then(console.log).catch(console.error)
 ```txt
 https://cdn.2dhentai.club/wp-content/uploads/2022/05/Genshin-Impact-hentai-Keqing-feet-covered-in-cum-r34-scaled.jpg
 ```
+# Payment Feature
+## Convert Saldo ke Gopay
+- convert saldo ke gopay support all payment method karena sudah menggunakan qris serta biaya admin sebesar Rp.1.190
+```js
+async function gopay(idProduct, PhoneNumber) {
+    const csrf = await hikki.payment.csrfGenerator()
+    const { data } = await hikki.payment.listProduct(csrf)
+    // console.log(data) untuk melihat id product yang tersedia
+    const isValidId = data.daftar_product.find(product => product.id == idProduct)
+    if (!isValidId) return console.error('invalid id product')
+    const gass = await hikki.payment.convertGopay(idProduct,PhoneNumber, csrf)
+    if (!'qr' in gass) return console.error('kurang ganteng')
+    return {
+        creator: '@hardianto02_',
+        ...gass,
+        ...isValidId
+    }
+}
+gopay(24, '085173222764').then(console.log).catch(console.error)
+```
+*return*
+```txt
+{
+  versiXendit: 1,
+  viaBank: 'xendit',
+  isOpenSnap: 'xendit',
+  tokenPayment: '{"id":"qr_4007b09b-107c-44b1-8073-962933e44672","external_id":"P5242503","amount":11190,"description":"","qr_string":"00020101021.WWW011893600915019388493802091938849380303UME51440014ID.CO.QRIS.WWW0215ID20211191923950303UME5204504553033605405111905802ID5911hotel_murah6015JAK1216062820125JfESlgCFwVzUrgDQXss0FuXop60490011ID.DANA.WWW0425MER2021071400774509608641050116304C5D7","callback_url":"https:\\/\\/hotelmurah.com\\/","type":"DYNAMIC","status":"ACTIVE","created":"2022-05-31T10:53:45.361Z","updated":"2022-05-31T10:53:45.361Z","metadata":null,"ewallet_type":"qri
+  id_order: 5242503,
+  status: 'NTI0MjUwMw==',
+  csrf: 'f969dd19aed3a16eaf81ebe7001b8cd4',
+  id_user: '0851732227641653994424',
+  qr: 'https://www.hotelmurah.com/pulsa/xendit/sbq888?pbq888=P5242503',
+  id: '24',
+  harga_jual: '10000',
+  harga_admin: '1000',
+  provider_aktif: '7',
+  enable: '1',
+  jenis: ''
+}
+```
+## Convert Saldo By Id
+- convert salod anda ke dana, shopeepay, gopay, linkaja 
+```txt
+id_product untuk convert saldo ke shopeepay 1-10 max Rp.200.000
+id_product untuk convert saldo ke ovo 11-23 max Rp.200.000
+id_product untuk convert saldo ke gopay 24-35 max Rp.200.000
+id_product untuk convert saldo ke dana 36-43 max Rp.200.000
+id_product untuk convert saldo ke linkaja 44-51 max Rp.200.000
+```
+
+```js
+// check id product di atas
+hikki.payment.convertSaldo(1, '085173222764').then(console.log).catch(console.error)
+```
+```txt
+{
+  order_id: 'P5244557085173222764',
+  tagihan: 'Rp 11.190',
+  time: '31 May 2022 18:58:51',
+  RRN: '4586557751',
+  product: 'ShopeePay 10.000',
+  img: 'https://www.hotelmurah.com/pulsa/xendit/sbq888?pbq888=P5244557'
+}
+```
 # Tools Feature
 ## build sticker (whatsapp-sticker)
 ```js

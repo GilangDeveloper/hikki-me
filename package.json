@@ -5,9 +5,22 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "prettier": "prettier --write . --list-different"
+    "prettier": "prettier --write . --list-different",
+    "dev": "node example/example.js"
   },
-  "keywords": ["api", "top-up", "free-fire", "top-up-api", "mobile-legends", "mobile-legend", "ml", "game", "anto-chan", "wa-bot", "whatsapp-bot"],
+  "keywords": [
+    "api",
+    "top-up",
+    "free-fire",
+    "top-up-api",
+    "mobile-legends",
+    "mobile-legend",
+    "ml",
+    "game",
+    "anto-chan",
+    "wa-bot",
+    "whatsapp-bot"
+  ],
   "author": "hardianto-cpu",
   "license": "ISC",
   "dependencies": {
