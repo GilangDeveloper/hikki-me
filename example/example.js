@@ -1,6 +1,4 @@
 const hikki = require('../src/index.js')
-const { submit_payment, csrfGenerator, listProduct, isProductValid, getDetailProduct, finished, convertGopay } = require('../src/payment/gopay.js')
-
 // game
 
 // top up free fire
