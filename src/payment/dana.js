@@ -87,7 +87,7 @@ function Order(Validate, Product, value_produk, value_id, no_hp) {
             payment_pay: form[0],
             id_pay: 100,
             payment_pay: 'qris',
-            no_ovo: '085751056816',
+            no_ovo: no_hp,
             type_pembayaran: 'x4',
             source: '',
             hm_csrf_hash_name: detailOrder.hm_csrf_hash_name,
