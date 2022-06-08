@@ -25,6 +25,40 @@ npm install github:hardianto-cpu/hikki-me
 const hikki = require('hikki-me')
 ```
 # Game Feature
+## Clash Of Clan
+
+```js
+hikki.game.getInfoClasher('#PP9QY2U2Q').then(console.log)
+```
+*return*
+```txt
+{
+  tag: '#PP9QY2U2Q',
+  name: 'Hardianto',
+  townHallLevel: 11,
+  expLevel: 133,
+  trophies: 2500,
+  bestTrophies: 2924,
+  warStars: 292,
+  attackWins: 16,
+  defenseWins: 3,
+  builderHallLevel: 7,
+  versusTrophies: 2664,
+  bestVersusTrophies: 3314,
+  versusBattleWins: 1188,
+  donations: 0,
+  donationsReceived: 0,
+  league: {
+    id: 29000012,
+    name: 'Crystal League I',
+    iconUrls: {
+      small: 'https://api-assets.clashofclans.com/leagues/72/kSfTyNNVSvogX3dMvpFUTt72VW74w6vEsEFuuOV4osQ.png',
+      tiny: 'https://api-assets.clashofclans.com/leagues/36/kSfTyNNVSvogX3dMvpFUTt72VW74w6vEsEFuuOV4osQ.png',
+      medium: 'https://api-assets.clashofclans.com/leagues/288/kSfTyNNVSvogX3dMvpFUTt72VW74w6vEsEFuuOV4osQ.png'
+    }
+  }
+  ```
+  
 ## Nickname Free Fire!
 
 ```js
