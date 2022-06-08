@@ -25,7 +25,7 @@ npm install github:hardianto-cpu/hikki-me
 const hikki = require('hikki-me')
 ```
 # Game Feature
-## Clash Of Clan
+## Clash Of Clans
 
 ```js
 hikki.game.getInfoClasher('#PP9QY2U2Q').then(console.log)
@@ -58,7 +58,7 @@ hikki.game.getInfoClasher('#PP9QY2U2Q').then(console.log)
     }
   }
   ```
-  
+
 ## Nickname Free Fire!
 
 ```js
