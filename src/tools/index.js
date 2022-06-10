@@ -9,32 +9,12 @@ const { fromBuffer } = require('file-type')
 const Image = require('node-webpmux').Image
 const Formdata = require('form-data')
 const fs = require('fs')
-
-const toBuffer = (url) => {
-  return new Promise(async (resolve, reject) => {
-    if (Buffer.isBuffer(url)) {
-      const file = await fromBuffer(url)
-      resolve({
-        buffer: url,
-        mime: file.mime,
-      })
-    }
-    if (typeof url === 'string' && !url.includes('http')) {
-      const base64 = url.replace(/^data:(.*?);base64,/, '')
-      const file = await fromBuffer(Buffer.from(base64, 'base64'))
-      resolve({
-        buffer: Buffer.from(url, 'base64'),
-        mime: file.mime,
-      })
-    } else {
-      axios.get(url, { responseType: 'arraybuffer' }).then((res) => {
-        resolve({
-          buffer: res.data,
-          mime: res.headers['content-type'],
-        })
-      })
-    }
-  })
+const toBuffer = async (file) => {
+  file = Buffer.isBuffer(file) ? file : typeof file === 'string' && file.startsWith('http') ? (await axios.get(file, {
+    responseType: 'arraybuffer',
+  })).data : fs.readFileSync(file)
+  const buffer = await fromBuffer(file)
+  return { buffer: file, mime: buffer.mime }
 }
 const config = {
   sessionInfo: {
