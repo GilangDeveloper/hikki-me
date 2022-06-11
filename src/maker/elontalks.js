@@ -39,6 +39,11 @@ module.exports = {
           author: '@hardianto02',
           url: `https://elontalks.s3.amazonaws.com/${response.id}.mp4`,
         }
+      } else if (status.status == 'error') {
+        return {
+          status: 'error',
+          error: 'failed to generate video',
+        }
       }
     }
   },
