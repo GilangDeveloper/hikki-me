@@ -462,6 +462,20 @@ hikki.tools.expandedUrl('https://vt.tiktok.com/ZSdeRDb3U/').then(console.log).ca
 ```txt
 https://www.tiktok.com/@iyhfflawss/video/7074218009589517594?_d=secCgYIASAHKAESPgo8GxjBW2lUQKfkeBr900O4epz2%2FVW9pfv2nXCzrMXEhu2ae%2FEURKDG%2FG4Lq5zRGm4L2TX4iIFTqEqwd%2BPbGgA%3D&_r=1&language=id&mid=6607483246617824006&preview_pb=0&region=ID&sec_user_id=MS4wLjABAAAAnFLbQAU9r0viMRxHGC2YX71B62NBp7zOAlalUT8JGomy9sZLBLDCaUePkoj9Xi_e&share_app_id=1180&share_item_id=7074218009589517594&share_link_id=fdab83d8-a5ef-4c91-8f40-3ba97ddb01b8&social_sharing=v1&source=h5_t&timestamp=1647175571&u_code=dj933bg19lhcaj&ugbiz_name=Main&user_id=6977556456305411073&utm_campaign=client_share&utm_medium=android&utm_source=copy
 ```
+# Generator
+## Elon Talk Meme
+```
+hikki.maker.elonTalks(1, 'beliau kocak geming').then(console.log).catch(console.error)
+```
+*return*
+```
+{
+  status: 'success',
+  status: 'hardianto02',
+  url: 'https://elontalks.s3.amazonaws.com/b21920d4e2ae47ffb3b006b46c76b79a.mp4'
+}
+```
+
 
 # Thanks to
 - father and mother

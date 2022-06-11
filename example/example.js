@@ -72,3 +72,6 @@ const hikki = require('../src/index.js')
 // }
 
 // gopay(24, '085173222764').then(console.log).catch(console.error)
+
+// elon talks
+// hikki.maker.elonTalks(1, 'beliau kocak geming').then(console.log).catch(console.error)
