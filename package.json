@@ -1,6 +1,6 @@
 {
   "name": "hikki-me",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "lopyou kack yang make module hikki-me",
   "main": "src/index.js",
   "scripts": {

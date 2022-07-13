@@ -4,6 +4,7 @@
  * jangan hapus author asli, jika ingin menghapus author asli, silahkan hubungi hardianto02_  untuk gelud bersama
  */
 const { default: axios } = require('axios')
+const fetch = require('node-fetch').default
 const { randomBytes } = require('crypto')
 const { fromBuffer } = require('file-type')
 const Image = require('node-webpmux').Image
@@ -50,27 +51,7 @@ const config = {
  * @returns {Promise<String>}
  */
 exports.expandedUrl = async (url) => {
-  let link
-  try {
-    const res = await axios.request({
-      method: 'get',
-      url: url,
-      maxRedirects: 0,
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 10; Redmi 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.58 Mobile Safari/537.36',
-        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-      },
-    })
-    link = res.headers.location
-  } catch (err) {
-    if (Math.trunc(err.response.status / 100) === 3) {
-      link = err.response.headers.location
-    } else {
-      throw err
-    }
-  } finally {
-    return link
-  }
+  return await fetch(url).then(res => res.url)
 }
 
 exports.setExif = async (webpSticker, packname, author, extra = {}) => {
