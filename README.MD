@@ -148,9 +148,38 @@ hikki.downloader.metaScrape('https://vt.tiktok.com/ZSdeRDb3U//').then(console.lo
 <uknown>..... 
 depending on your link. different social media, different property results
 ```
+## Instagrams!
+```js
+hikki.downloader.instagram('https://www.instagram.com/p/Cf58iIUL1TE/?utm_source=ig_web_copy_link').then(console.log).catch(console)
+```
+*return*
+```txt
+{
+  url: 'https://www.instagram.com/p/Cf58iIUL1TE/?utm_source=ig_web_copy_link',
+  title: 'Instagram Post from k4t4sh1._',
+  thumbnail: 'https//downvideo.quora-wiki.com/plugin/aio-video-downloader/cache/ig-0dc0b97b8f0fa629a3a61992539595344146619c.jpg',
+  thumbnailHotlinkProtection: true,
+  duration: null,
+  medias: [
+    {
+      url: 'https://scontent.cdninstagram.com/v/t50.2886-16/293166280_809677203744629_6326455376567501929_n.mp4?_nc_ht=scontent.cdninstagram.com&_nc_cat=105&_nc_ohc=vWahqLZd6bQAX9ODFbc&edm=AJBgZrYBAAAA&ccb=7-5&oe=62D1DDEB&oh=00_AT9M_UBNCq8qgyjfSDUJzsTrFj0fBQPmSQcK-1EWTML4mw&_nc_sid=78c662',
+      quality: 'hd',
+      extension: 'mp4',
+      size: 1623137,
+      formattedSize: '1.55 MB',
+      videoAvailable: true,
+      audioAvailable: true,
+      chunked: false,
+      cached: false
+    }
+  ],
+  source: 'instagram',
+  author: '@hardianto02_'
+}
+```
 ## Tiktok!
 ```js
-hikki.downloader.tiktokDownloader('https://vt.tiktok.com/ZSdeRDb3U/').then(console.log).catch(console.error)
+hikki.downloader.tiktokDownloader('https://vt.tiktok.com/ZSdeRDb3U/', {withNoWM: true}).then(console.log).catch(console.error) // if option withNoWm false default
 ```
 *return*
 ```txt

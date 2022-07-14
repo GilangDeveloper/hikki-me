@@ -3,4 +3,5 @@ module.exports = {
   ...require('./tiktok'),
   ...require('./meta-scraper'),
   ...require('./youtube'),
+  ...require('./instagram')
 }

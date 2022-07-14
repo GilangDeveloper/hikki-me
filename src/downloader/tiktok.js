@@ -1,8 +1,9 @@
 const { default: fetch } = require('node-fetch')
 const { expandedUrl } = require('../tools')
+const { metaScrape } = require('./meta-scraper')
 
 module.exports = {
-  async tiktokDownloader(url) {
+  async tiktokDownloader(url, { withNoWm }) {
     return new Promise(async (resolve, reject) => {
       url = await expandedUrl(url)
       const api_tiktok = `https://tiktok.com/node/share/video/${url.split('/')[3]}/${url.split('/')[5]}`
@@ -12,11 +13,14 @@ module.exports = {
         },
       })
       const res = await response.json()
+      const data = withNoWm ? await metaScrape(url) : {}
       const result = res.seoProps
       const json = {
         ...result.metaParams,
         ...res.itemInfo.itemStruct,
+        data: data
       }
+
       resolve(json)
     })
   },

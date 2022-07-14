@@ -24,10 +24,13 @@ const hikki = require('../src/index.js')
 // hikki.downloader.metaScrape('https://vt.tiktok.com/ZSdeRDb3U//').then(console.log).catch(console.error)
 
 // tiktok downloader
-// hikki.downloader.tiktokDownloader('https://vt.tiktok.com/ZSdeRDb3U/').then(console.log).catch(console.error)
+// hikki.downloader.tiktokDownloader('https://vt.tiktok.com/ZSdeRDb3U/', {withNoWm: true}).then(console.log).catch(console.error)
 
-// yoube play downloader
+// youtube play downloader
 // hikki.downloader.youtubePlay('light switch').then(console.log).catch(console.error)
+
+// instagram downloader 
+// hikki.downloader.instagram('https://www.instagram.com/p/Cf58iIUL1TE/?utm_source=ig_web_copy_link').then(console.log).catch(console)
 
 // weebs
 // wallpaper
