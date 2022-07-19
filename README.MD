@@ -179,7 +179,7 @@ hikki.downloader.instagram('https://www.instagram.com/p/Cf58iIUL1TE/?utm_source=
 ```
 ## Tiktok!
 ```js
-hikki.downloader.tiktokDownloader('https://vt.tiktok.com/ZSdeRDb3U/', {withNoWM: true}).then(console.log).catch(console.error) // if option withNoWm false default
+hikki.downloader.tiktokDownloader('https://vt.tiktok.com/ZSdeRDb3U/', true).then(console.log).catch(console.error) // if option withNoWm false default
 ```
 *return*
 ```txt
