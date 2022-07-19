@@ -3,7 +3,7 @@ const { expandedUrl } = require('../tools')
 const { metaScrape } = require('./meta-scraper')
 
 module.exports = {
-  async tiktokDownloader(url, { withNoWm: false }) {
+  async tiktokDownloader(url, withNoWm = false) {
     return new Promise(async (resolve, reject) => {
       url = await expandedUrl(url)
       const api_tiktok = `https://tiktok.com/node/share/video/${url.split('/')[3]}/${url.split('/')[5]}`
